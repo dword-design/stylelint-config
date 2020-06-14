@@ -1,0 +1,45 @@
+{
+  "name": "@dword-design/stylelint-config",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "dword-design/stylelint-config",
+  "license": "MIT",
+  "author": "Sebastian Landwehr <info@dword-design.de>",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "commit": "base commit",
+    "dev": "base dev",
+    "lint": "base lint",
+    "prepare": "base prepare",
+    "prepublishOnly": "base prepublishOnly",
+    "test": "base test"
+  },
+  "dependencies": {
+    "get-package-name": "^1.1.0",
+    "stylelint-config-hudochenkov": "^4.0.0",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.17.2",
+    "stylelint-use-nesting": "^3.0.0"
+  },
+  "devDependencies": {
+    "@dword-design/base": "^6.15.5",
+    "@dword-design/functions": "^1.1.2",
+    "stylelint": "^13.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "baseConfig": {
+    "depcheckConfig": {
+      "ignoreMatches": [
+        "stylelint-order"
+      ]
+    }
+  }
+}
