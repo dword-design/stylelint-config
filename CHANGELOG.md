@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dword-design/stylelint-config/compare/v1.0.0...v1.1.0) (2020-06-14)
+
+
+### Features
+
+* forbig leading zero ([aae4a3b](https://github.com/dword-design/stylelint-config/commit/aae4a3b6ae6810bb4ba81ad9d61a075d5a140ff4))
+
 # 1.0.0 (2020-06-14)
 
 
