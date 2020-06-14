@@ -100,4 +100,12 @@ export default {
 
     `,
   },
+  'no leading zero': {
+    code: endent`
+      body {
+        margin: .5rem;
+      }
+
+    `,
+  },
 } |> mapValues(runTest)
