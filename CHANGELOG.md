@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/dword-design/stylelint-config/compare/v1.1.0...v1.1.1) (2020-06-14)
+
+
+### Bug Fixes
+
+* add empty file rule ([f4bd18d](https://github.com/dword-design/stylelint-config/commit/f4bd18dd1c75de203a6ba2b26267921f10d4ff2b))
+
 # [1.1.0](https://github.com/dword-design/stylelint-config/compare/v1.0.0...v1.1.0) (2020-06-14)
 
 
