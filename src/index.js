@@ -23,5 +23,6 @@ export default {
     'plugin/declaration-block-no-ignored-properties': true,
     'rule-empty-line-before': 'always',
     'number-leading-zero': 'never',
+    'no-empty-source': null,
   },
 }

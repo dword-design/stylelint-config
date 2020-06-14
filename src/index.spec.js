@@ -108,4 +108,7 @@ export default {
 
     `,
   },
+  'empty file': {
+    code: '',
+  },
 } |> mapValues(runTest)
