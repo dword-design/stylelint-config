@@ -24,7 +24,7 @@ const runTest = options => async () => {
     |> values
     |> flatten
     |> map('text')
-  expect(expectedResult).toEqual(actualResult)
+  expect(actualResult).toEqual(expectedResult)
 }
 
 export default {
@@ -110,5 +110,44 @@ export default {
   },
   'empty file': {
     code: '',
+  },
+  'no nesting: child': {
+    code: endent`
+      body {
+        margin: .5rem;
+      }
+
+      body .foo {
+        padding: .5rem;
+      }
+
+    `,
+    result: ['Expected "body .foo" inside "body". (csstools/use-nesting)'],
+  },
+  'no nesting: class': {
+    code: endent`
+      body {
+        margin: .5rem;
+      }
+
+      body.foo {
+        padding: .5rem;
+      }
+
+    `,
+    result: ['Expected "body.foo" inside "body". (csstools/use-nesting)'],
+  },
+  'no nesting: attribute': {
+    code: endent`
+      body {
+        margin: .5rem;
+      }
+
+      body[data-foo] {
+        padding: .5rem;
+      }
+
+    `,
+    result: ['Expected "body[data-foo]" inside "body". (csstools/use-nesting)'],
   },
 } |> mapValues(runTest)
