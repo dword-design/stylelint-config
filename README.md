@@ -1,9 +1,9 @@
 <!-- TITLE/ -->
-# stylelint-config
+# @dword-design/stylelint-config
 <!-- /TITLE -->
 
 <!-- BADGES/ -->
-[![NPM version](https://img.shields.io/npm/v/stylelint-config.svg)](https://npmjs.org/package/stylelint-config)
+[![NPM version](https://img.shields.io/npm/v/@dword-design/stylelint-config.svg)](https://npmjs.org/package/@dword-design/stylelint-config)
 ![Linux macOS Windows compatible](https://img.shields.io/badge/os-linux%20%7C%C2%A0macos%20%7C%C2%A0windows-blue)
 [![Build status](https://img.shields.io/github/workflow/status/dword-design/stylelint-config/build)](https://github.com/dword-design/stylelint-config/actions)
 [![Coverage status](https://img.shields.io/coveralls/dword-design/stylelint-config)](https://coveralls.io/github/dword-design/stylelint-config)
@@ -22,10 +22,10 @@
 
 ```bash
 # NPM
-$ npm install stylelint-config
+$ npm install @dword-design/stylelint-config
 
 # Yarn
-$ yarn add stylelint-config
+$ yarn add @dword-design/stylelint-config
 ```
 <!-- /INSTALL -->
 
