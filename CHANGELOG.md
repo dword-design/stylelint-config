@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/dword-design/stylelint-config/compare/v1.2.0...v1.2.1) (2020-06-15)
+
+
+### Bug Fixes
+
+* remove line before rule ([5837d1f](https://github.com/dword-design/stylelint-config/commit/5837d1f1b2784dfbd46f266cedcf820438714fd9))
+
 # [1.2.0](https://github.com/dword-design/stylelint-config/compare/v1.1.2...v1.2.0) (2020-06-15)
 
 
