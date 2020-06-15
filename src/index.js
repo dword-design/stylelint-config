@@ -22,7 +22,6 @@ export default {
     ],
     'csstools/use-nesting': 'always',
     'plugin/declaration-block-no-ignored-properties': true,
-    'rule-empty-line-before': 'always',
     'no-empty-source': null,
   },
 }

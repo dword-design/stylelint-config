@@ -67,7 +67,6 @@ export default {
       }
 
     `,
-    result: ['Expected empty line before rule (rule-empty-line-before)'],
   },
   'no blank line at inner selector': {
     code: endent`
@@ -78,7 +77,6 @@ export default {
       }
 
     `,
-    result: ['Expected empty line before rule (rule-empty-line-before)'],
   },
   global: {
     code: endent`
