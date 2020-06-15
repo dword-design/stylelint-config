@@ -55,7 +55,7 @@ export default {
       }
 
     `,
-    result: ['Expected indentation of 2 spaces (indentation)'],
+    result: ['Delete "··" (prettier/prettier)'],
   },
   'no blank line between selectors': {
     code: endent`
@@ -107,6 +107,7 @@ export default {
       }
 
     `,
+    result: ['Insert "0" (prettier/prettier)'],
   },
   'empty file': {
     code: '',
@@ -114,11 +115,11 @@ export default {
   'no nesting: child': {
     code: endent`
       body {
-        margin: .5rem;
+        margin: 0.5rem;
       }
 
       body .foo {
-        padding: .5rem;
+        padding: 0.5rem;
       }
 
     `,
@@ -127,11 +128,11 @@ export default {
   'no nesting: class': {
     code: endent`
       body {
-        margin: .5rem;
+        margin: 0.5rem;
       }
 
       body.foo {
-        padding: .5rem;
+        padding: 0.5rem;
       }
 
     `,
@@ -140,11 +141,11 @@ export default {
   'no nesting: attribute': {
     code: endent`
       body {
-        margin: .5rem;
+        margin: 0.5rem;
       }
 
       body[data-foo] {
-        padding: .5rem;
+        padding: 0.5rem;
       }
 
     `,

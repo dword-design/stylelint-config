@@ -5,6 +5,7 @@ export default {
     getPackageName(require.resolve('stylelint-config-standard')),
     getPackageName(require.resolve('stylelint-config-recommended-scss')),
     `${getPackageName(require.resolve('stylelint-config-hudochenkov'))}/order`,
+    `${getPackageName(require.resolve('stylelint-prettier'))}/recommended`,
   ],
   plugins: [
     getPackageName(require.resolve('stylelint-use-nesting')),
@@ -22,7 +23,6 @@ export default {
     'csstools/use-nesting': 'always',
     'plugin/declaration-block-no-ignored-properties': true,
     'rule-empty-line-before': 'always',
-    'number-leading-zero': 'never',
     'no-empty-source': null,
   },
 }
