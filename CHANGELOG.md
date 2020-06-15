@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/dword-design/stylelint-config/compare/v1.1.2...v1.2.0) (2020-06-15)
+
+
+### Features
+
+* use prettier ([efc10d0](https://github.com/dword-design/stylelint-config/commit/efc10d075159964c358a02afbc3a9a17b09f38d0))
+
 ## [1.1.2](https://github.com/dword-design/stylelint-config/compare/v1.1.1...v1.1.2) (2020-06-14)
 
 
