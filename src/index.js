@@ -20,7 +20,7 @@ export default {
         ignorePseudoClasses: ['global'],
       },
     ],
-    'csstools/use-nesting': 'always',
+    'csstools/use-nesting': ['always', { except: /:(hover|focus)/ }],
     'plugin/declaration-block-no-ignored-properties': true,
     'no-empty-source': null,
   },

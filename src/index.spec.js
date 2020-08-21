@@ -149,4 +149,20 @@ export default {
     `,
     result: ['Expected "body[data-foo]" inside "body". (csstools/use-nesting)'],
   },
+  'nesting: pseudo selector': {
+    code: endent`
+      body {
+        margin: 0.5rem;
+
+        img {
+          padding: 0;
+        }
+
+        &:hover img {
+          padding: 0.5rem;
+        }
+      }
+
+    `,
+  },
 } |> mapValues(runTest)
