@@ -149,7 +149,20 @@ export default {
     `,
     result: ['Expected "body[data-foo]" inside "body". (csstools/use-nesting)'],
   },
-  'nesting: pseudo selector': {
+  'no nesting: pseudo selector': {
+    code: endent`
+      body {
+        margin: 0.5rem;
+      }
+
+      body:hover {
+        padding: 0.5rem;
+      }
+
+    `,
+    result: ['Expected "body:hover" inside "body". (csstools/use-nesting)'],
+  },
+  'nesting: inner nesting pseudo selector': {
     code: endent`
       body {
         margin: 0.5rem;
