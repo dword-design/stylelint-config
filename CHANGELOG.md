@@ -1,3 +1,11 @@
+## [1.2.3](https://github.com/dword-design/stylelint-config/compare/v1.2.2...v1.2.3) (2020-08-21)
+
+
+### Bug Fixes
+
+* fix ([50467a0](https://github.com/dword-design/stylelint-config/commit/50467a01520b4ea558a32c5b163913e9e2a84387))
+* fix hover and focus nesting ([e8ee6a9](https://github.com/dword-design/stylelint-config/commit/e8ee6a9bfc8ad9a43362cfaf5351e46b8a2222fc))
+
 ## [1.2.2](https://github.com/dword-design/stylelint-config/compare/v1.2.1...v1.2.2) (2020-07-05)
 
 
