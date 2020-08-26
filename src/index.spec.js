@@ -12,7 +12,7 @@ import config from '.'
 
 const runTest = options => async () => {
   const expectedResult = options.result || []
-  const lintResult = await stylelint.lint({ config, code: options.code })
+  const lintResult = await stylelint.lint({ code: options.code, config })
   const actualResult =
     lintResult.results[0]
     |> pick([
@@ -28,25 +28,16 @@ const runTest = options => async () => {
 }
 
 export default {
-  valid: {
-    code: endent`
-      body {
-        background: red;
-      }
-
-    `,
+  'empty file': {
+    code: '',
   },
-  'wrong property order': {
+  global: {
     code: endent`
-      body {
+      :global(.foo) {
         background: red;
-        position: absolute;
       }
 
     `,
-    result: [
-      'Expected "position" to come before "background" (order/properties-order)',
-    ],
   },
   'indent too big': {
     code: endent`
@@ -57,13 +48,18 @@ export default {
     `,
     result: ['Delete "··" (prettier/prettier)'],
   },
-  'no blank line between selectors': {
+  'nesting: inner nesting pseudo selector': {
     code: endent`
       body {
-        background: red;
-      }
-      html {
-        background: green;
+        margin: 0.5rem;
+
+        img {
+          padding: 0;
+        }
+
+        &:hover img {
+          padding: 0.5rem;
+        }
       }
 
     `,
@@ -78,22 +74,13 @@ export default {
 
     `,
   },
-  global: {
+  'no blank line between selectors': {
     code: endent`
-      :global(.foo) {
-        background: red;
-      }
-
-    `,
-  },
-  sass: {
-    code: endent`
-      %foo {
-        background: red;
-      }
-
       body {
-        @extend %foo;
+        background: red;
+      }
+      html {
+        background: green;
       }
 
     `,
@@ -107,8 +94,18 @@ export default {
     `,
     result: ['Insert "0" (prettier/prettier)'],
   },
-  'empty file': {
-    code: '',
+  'no nesting: attribute': {
+    code: endent`
+      body {
+        margin: 0.5rem;
+      }
+
+      body[data-foo] {
+        padding: 0.5rem;
+      }
+
+    `,
+    result: ['Expected "body[data-foo]" inside "body". (csstools/use-nesting)'],
   },
   'no nesting: child': {
     code: endent`
@@ -136,19 +133,6 @@ export default {
     `,
     result: ['Expected "body.foo" inside "body". (csstools/use-nesting)'],
   },
-  'no nesting: attribute': {
-    code: endent`
-      body {
-        margin: 0.5rem;
-      }
-
-      body[data-foo] {
-        padding: 0.5rem;
-      }
-
-    `,
-    result: ['Expected "body[data-foo]" inside "body". (csstools/use-nesting)'],
-  },
   'no nesting: pseudo selector': {
     code: endent`
       body {
@@ -162,20 +146,36 @@ export default {
     `,
     result: ['Expected "body:hover" inside "body". (csstools/use-nesting)'],
   },
-  'nesting: inner nesting pseudo selector': {
+  sass: {
     code: endent`
+      %foo {
+        background: red;
+      }
+
       body {
-        margin: 0.5rem;
-
-        img {
-          padding: 0;
-        }
-
-        &:hover img {
-          padding: 0.5rem;
-        }
+        @extend %foo;
       }
 
     `,
+  },
+  valid: {
+    code: endent`
+      body {
+        background: red;
+      }
+
+    `,
+  },
+  'wrong property order': {
+    code: endent`
+      body {
+        background: red;
+        position: absolute;
+      }
+
+    `,
+    result: [
+      'Expected "position" to come before "background" (order/properties-order)',
+    ],
   },
 } |> mapValues(runTest)
