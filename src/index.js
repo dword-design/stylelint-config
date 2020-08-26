@@ -14,14 +14,14 @@ export default {
     ),
   ],
   rules: {
+    'csstools/use-nesting': ['always', { except: /&:(hover|focus)/ }],
+    'no-empty-source': null,
+    'plugin/declaration-block-no-ignored-properties': true,
     'selector-pseudo-class-no-unknown': [
       true,
       {
         ignorePseudoClasses: ['global'],
       },
     ],
-    'csstools/use-nesting': ['always', { except: /&:(hover|focus)/ }],
-    'plugin/declaration-block-no-ignored-properties': true,
-    'no-empty-source': null,
   },
 }
