@@ -19,7 +19,7 @@
     "test": "base test"
   },
   "dependencies": {
-    "get-package-name": "^1.1.0",
+    "get-package-name": "^2.0.0",
     "stylelint-config-hudochenkov": "^5.0.0",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-recommended-scss": "^4.2.0",
