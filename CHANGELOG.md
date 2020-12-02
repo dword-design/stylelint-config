@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/dword-design/stylelint-config/compare/v1.2.4...v1.2.5) (2020-12-02)
+
+
+### Bug Fixes
+
+* **config:** Update changed files ([f0ea46b](https://github.com/dword-design/stylelint-config/commit/f0ea46ba5e9802aa940c82480e8382ed5a26d04c))
+
 ## [1.2.4](https://github.com/dword-design/stylelint-config/compare/v1.2.3...v1.2.4) (2020-08-26)
 
 
