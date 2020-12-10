@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/dword-design/stylelint-config/compare/v1.2.5...v1.2.6) (2020-12-10)
+
+
+### Bug Fixes
+
+* replace get-package-name with depcheck-package-name ([387f209](https://github.com/dword-design/stylelint-config/commit/387f20993fbddace019a2d4fe183fc10af6a035d))
+
 ## [1.2.5](https://github.com/dword-design/stylelint-config/compare/v1.2.4...v1.2.5) (2020-12-02)
 
 
