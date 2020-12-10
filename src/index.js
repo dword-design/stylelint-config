@@ -1,17 +1,15 @@
-import getPackageName from 'get-package-name'
+import packageName from 'depcheck-package-name'
 
 export default {
   extends: [
-    getPackageName(require.resolve('stylelint-config-standard')),
-    getPackageName(require.resolve('stylelint-config-recommended-scss')),
-    `${getPackageName(require.resolve('stylelint-config-hudochenkov'))}/order`,
-    `${getPackageName(require.resolve('stylelint-prettier'))}/recommended`,
+    packageName`stylelint-config-standard`,
+    packageName`stylelint-config-recommended-scss`,
+    `${packageName`stylelint-config-hudochenkov`}/order`,
+    `${packageName`stylelint-prettier`}/recommended`,
   ],
   plugins: [
-    getPackageName(require.resolve('stylelint-use-nesting')),
-    getPackageName(
-      require.resolve('stylelint-declaration-block-no-ignored-properties')
-    ),
+    packageName`stylelint-use-nesting`,
+    packageName`stylelint-declaration-block-no-ignored-properties`,
   ],
   rules: {
     'csstools/use-nesting': ['always', { except: /&:(hover|focus)/ }],
