@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/dword-design/stylelint-config/compare/v1.2.6...v1.2.7) (2021-02-17)
+
+
+### Bug Fixes
+
+* upgrades ([ccf86fb](https://github.com/dword-design/stylelint-config/commit/ccf86fbc90eea4b588910405999531a0797b92ea))
+
 ## [1.2.6](https://github.com/dword-design/stylelint-config/compare/v1.2.5...v1.2.6) (2020-12-10)
 
 
