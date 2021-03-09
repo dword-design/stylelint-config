@@ -1,3 +1,10 @@
+## [1.2.9](https://github.com/dword-design/stylelint-config/compare/v1.2.8...v1.2.9) (2021-03-09)
+
+
+### Bug Fixes
+
+* update dependency stylelint-config-standard to v21 ([db704a3](https://github.com/dword-design/stylelint-config/commit/db704a3b4c107b2cc92cd790ac747abfb7fce0d6))
+
 ## [1.2.8](https://github.com/dword-design/stylelint-config/compare/v1.2.7...v1.2.8) (2021-03-09)
 
 
