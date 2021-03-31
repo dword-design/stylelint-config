@@ -12,7 +12,9 @@ import config from '.'
 
 const runTest = options => async () => {
   const expectedResult = options.result || []
+
   const lintResult = await stylelint.lint({ code: options.code, config })
+
   const actualResult =
     lintResult.results[0]
     |> pick([
