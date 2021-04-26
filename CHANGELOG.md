@@ -1,3 +1,10 @@
+## [1.2.16](https://github.com/dword-design/stylelint-config/compare/v1.2.15...v1.2.16) (2021-04-26)
+
+
+### Bug Fixes
+
+* update dependency stylelint-config-standard to v22 ([#23](https://github.com/dword-design/stylelint-config/issues/23)) ([227625d](https://github.com/dword-design/stylelint-config/commit/227625d86122917fd51177dba014ffcd7b4de5c6))
+
 ## [1.2.15](https://github.com/dword-design/stylelint-config/compare/v1.2.14...v1.2.15) (2021-04-26)
 
 
