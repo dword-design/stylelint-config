@@ -1,3 +1,10 @@
+## [1.2.15](https://github.com/dword-design/stylelint-config/compare/v1.2.14...v1.2.15) (2021-04-26)
+
+
+### Bug Fixes
+
+* updated package.json[description] ([#22](https://github.com/dword-design/stylelint-config/issues/22)) ([2908218](https://github.com/dword-design/stylelint-config/commit/290821868b9d0d64c1f08a861edeb3dbe0a61b46))
+
 ## [1.2.14](https://github.com/dword-design/stylelint-config/compare/v1.2.13...v1.2.14) (2021-04-12)
 
 
