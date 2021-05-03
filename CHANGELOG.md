@@ -1,3 +1,19 @@
+# [2.0.0](https://github.com/dword-design/stylelint-config/compare/v1.2.16...v2.0.0) (2021-05-03)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base to v8 ([#26](https://github.com/dword-design/stylelint-config/issues/26)) ([a6ecde8](https://github.com/dword-design/stylelint-config/commit/a6ecde88ad2d5cdfec275965857b4be2b1c67550))
+
+
+### BREAKING CHANGES
+
+* require Node.js >= 12
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+Co-authored-by: Sebastian Landwehr <info@dword-design.de>
+Co-authored-by: GitHub Actions <actions@github.com>
+
 ## [1.2.16](https://github.com/dword-design/stylelint-config/compare/v1.2.15...v1.2.16) (2021-04-26)
 
 
