@@ -31,9 +31,12 @@
     "stylelint-use-nesting": "dword-design/stylelint-use-nesting#fork"
   },
   "devDependencies": {
-    "@dword-design/base": "^7.0.0",
+    "@dword-design/base": "^8.0.0",
     "@dword-design/functions": "^3.0.0",
     "stylelint": "^13.6.0"
+  },
+  "engines": {
+    "node": ">=12"
   },
   "publishConfig": {
     "access": "public"
