@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@dword-design/base": "^8.0.0",
-    "@dword-design/functions": "^3.0.0",
+    "@dword-design/functions": "^4.0.0",
     "stylelint": "^13.6.0"
   },
   "engines": {
