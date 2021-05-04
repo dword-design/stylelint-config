@@ -1,3 +1,11 @@
+## [2.0.1](https://github.com/dword-design/stylelint-config/compare/v2.0.0...v2.0.1) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v4 ([#27](https://github.com/dword-design/stylelint-config/issues/27)) ([ed92847](https://github.com/dword-design/stylelint-config/commit/ed928470cbc8dea41701b06172fa5c4022ddc509))
+* update dependency depcheck-package-name to v2 ([#28](https://github.com/dword-design/stylelint-config/issues/28)) ([248b0e5](https://github.com/dword-design/stylelint-config/commit/248b0e58c3a5c4b937fe1515e8d5b9b200436f1e))
+
 # [2.0.0](https://github.com/dword-design/stylelint-config/compare/v1.2.16...v2.0.0) (2021-05-03)
 
 
