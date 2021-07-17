@@ -81,6 +81,20 @@ export default {
 
     `,
   },
+  'nesting: inner nesting': {
+    code: endent`
+      .foo {
+        .bar {
+          padding: 0.5rem;
+        }
+
+        &.baz .bar {
+          color: red;
+        }
+      }
+
+    `,
+  },
   'nesting: inner nesting pseudo selector': {
     code: endent`
       body {
