@@ -95,36 +95,6 @@ export default {
 
     `,
   },
-  'nesting: inner nesting pseudo selector': {
-    code: endent`
-      body {
-        margin: 0.5rem;
-
-        img {
-          padding: 0;
-        }
-
-        &:hover img {
-          padding: 0.5rem;
-        }
-      }
-
-    `,
-    result: endent`
-      body {
-        margin: 0.5rem;
-
-        img {
-          padding: 0;
-        }
-
-      &:hover img {
-        padding: 0.5rem;
-      }
-      }
-
-    `,
-  },
   'no blank line at inner selector': {
     code: endent`
       body {
