@@ -1,22 +1,28 @@
 import {
   endent,
+  first,
   flatten,
   map,
   mapValues,
   pick,
+  property,
   values,
 } from '@dword-design/functions'
 import stylelint from 'stylelint'
 
 import config from '.'
 
-const runTest = options => async () => {
-  const expectedResult = options.result || []
+const runTest = test => async () => {
+  test = { messages: [], output: test.code, ...test }
 
-  const lintResult = await stylelint.lint({ code: options.code, config })
-
-  const actualResult =
-    lintResult.results[0]
+  const messages =
+    stylelint.lint({
+      code: test.code,
+      config,
+    })
+    |> await
+    |> property('results')
+    |> first
     |> pick([
       'deprecations',
       'invalidOptionWarnings',
@@ -26,7 +32,26 @@ const runTest = options => async () => {
     |> values
     |> flatten
     |> map('text')
-  expect(actualResult).toEqual(expectedResult)
+  expect(messages).toEqual(test.messages)
+
+  const firstOutput =
+    stylelint.lint({
+      code: test.code,
+      config,
+      fix: true,
+    })
+    |> await
+    |> property('output')
+
+  const output =
+    stylelint.lint({
+      code: firstOutput,
+      config,
+      fix: true,
+    })
+    |> await
+    |> property('output')
+  expect(output).toEqual(test.output)
 }
 
 export default {
@@ -48,7 +73,13 @@ export default {
       }
 
     `,
-    result: ['Delete "··" (prettier/prettier)'],
+    messages: ['Delete "··" (prettier/prettier)'],
+    output: endent`
+      body {
+        background: red;
+      }
+
+    `,
   },
   'nesting: inner nesting pseudo selector': {
     code: endent`
@@ -62,6 +93,20 @@ export default {
         &:hover img {
           padding: 0.5rem;
         }
+      }
+
+    `,
+    result: endent`
+      body {
+        margin: 0.5rem;
+
+        img {
+          padding: 0;
+        }
+
+      &:hover img {
+        padding: 0.5rem;
+      }
       }
 
     `,
@@ -94,7 +139,13 @@ export default {
       }
 
     `,
-    result: ['Insert "0" (prettier/prettier)'],
+    messages: ['Insert "0" (prettier/prettier)'],
+    output: endent`
+      body {
+        margin: 0.5rem;
+      }
+      
+    `,
   },
   'no nesting: attribute': {
     code: endent`
@@ -107,7 +158,19 @@ export default {
       }
 
     `,
-    result: ['Expected "body[data-foo]" inside "body". (csstools/use-nesting)'],
+    messages: [
+      'Expected "body[data-foo]" inside "body". (csstools/use-nesting)',
+    ],
+    output: endent`
+      body {
+        margin: 0.5rem;
+
+        &[data-foo] {
+          padding: 0.5rem;
+        }
+      }
+
+    `,
   },
   'no nesting: child': {
     code: endent`
@@ -120,7 +183,17 @@ export default {
       }
 
     `,
-    result: ['Expected "body .foo" inside "body". (csstools/use-nesting)'],
+    messages: ['Expected "body .foo" inside "body". (csstools/use-nesting)'],
+    output: endent`
+      body {
+        margin: 0.5rem;
+
+        & .foo {
+          padding: 0.5rem;
+        }
+      }
+
+    `,
   },
   'no nesting: class': {
     code: endent`
@@ -133,7 +206,17 @@ export default {
       }
 
     `,
-    result: ['Expected "body.foo" inside "body". (csstools/use-nesting)'],
+    messages: ['Expected "body.foo" inside "body". (csstools/use-nesting)'],
+    output: endent`
+      body {
+        margin: 0.5rem;
+
+        &.foo {
+          padding: 0.5rem;
+        }
+      }
+
+    `,
   },
   'no nesting: pseudo selector': {
     code: endent`
@@ -146,7 +229,17 @@ export default {
       }
 
     `,
-    result: ['Expected "body:hover" inside "body". (csstools/use-nesting)'],
+    messages: ['Expected "body:hover" inside "body". (csstools/use-nesting)'],
+    output: endent`
+      body {
+        margin: 0.5rem;
+
+        &:hover {
+          padding: 0.5rem;
+        }
+      }
+
+    `,
   },
   sass: {
     code: endent`
@@ -176,8 +269,15 @@ export default {
       }
 
     `,
-    result: [
+    messages: [
       'Expected "position" to come before "background" (order/properties-order)',
     ],
+    output: endent`
+      body {
+        position: absolute;
+        background: red;
+      }
+
+    `,
   },
 } |> mapValues(runTest)
