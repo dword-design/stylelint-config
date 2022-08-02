@@ -1,3 +1,11 @@
+## [2.0.6](https://github.com/dword-design/stylelint-config/compare/v2.0.5...v2.0.6) (2022-08-02)
+
+
+### Bug Fixes
+
+* re-add old fork ([d7df995](https://github.com/dword-design/stylelint-config/commit/d7df995403dd1e90297f501aa7bc29a4d6f76775))
+* use stylelint-use-nesting master ([648fb62](https://github.com/dword-design/stylelint-config/commit/648fb62cfa11e6537442871b56445ae9f6458b1c))
+
 ## [2.0.5](https://github.com/dword-design/stylelint-config/compare/v2.0.4...v2.0.5) (2021-07-20)
 
 
