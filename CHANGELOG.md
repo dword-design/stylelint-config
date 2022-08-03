@@ -1,3 +1,10 @@
+## [2.0.7](https://github.com/dword-design/stylelint-config/compare/v2.0.6...v2.0.7) (2022-08-03)
+
+
+### Bug Fixes
+
+* trigger release ([4cf8380](https://github.com/dword-design/stylelint-config/commit/4cf83807acf2917ab64de09a08cdf4e2052db5ee))
+
 ## [2.0.6](https://github.com/dword-design/stylelint-config/compare/v2.0.5...v2.0.6) (2022-08-02)
 
 
