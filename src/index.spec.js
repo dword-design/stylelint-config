@@ -10,7 +10,7 @@ import {
 } from '@dword-design/functions'
 import stylelint from 'stylelint'
 
-import config from '.'
+import config from './index'
 
 const runTest = test => async () => {
   test = { messages: [], output: test.code, ...test }

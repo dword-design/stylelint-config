@@ -12,6 +12,7 @@
   "scripts": {
     "checkUnknownFiles": "base checkUnknownFiles",
     "commit": "base commit",
+    "depcheck": "base depcheck",
     "dev": "base dev",
     "lint": "base lint",
     "prepare": "base prepare",
@@ -31,22 +32,14 @@
     "stylelint-use-nesting": "dword-design/stylelint-use-nesting#fork"
   },
   "devDependencies": {
-    "@dword-design/base": "^8.0.0",
+    "@dword-design/base": "^9.2.3",
     "@dword-design/functions": "^4.0.0",
     "stylelint": "^13.6.0"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "baseConfig": {
-    "depcheckConfig": {
-      "ignoreMatches": [
-        "stylelint-config-prettier",
-        "stylelint-order"
-      ]
-    }
   }
 }
