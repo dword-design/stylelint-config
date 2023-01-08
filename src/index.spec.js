@@ -81,32 +81,16 @@ export default {
 
     `,
   },
-  'nesting: inner nesting pseudo selector': {
+  'nesting: inner nesting': {
     code: endent`
-      body {
-        margin: 0.5rem;
-
-        img {
-          padding: 0;
-        }
-
-        &:hover img {
+      .foo {
+        .bar {
           padding: 0.5rem;
         }
-      }
 
-    `,
-    result: endent`
-      body {
-        margin: 0.5rem;
-
-        img {
-          padding: 0;
+        &.baz .bar {
+          color: red;
         }
-
-      &:hover img {
-        padding: 0.5rem;
-      }
       }
 
     `,

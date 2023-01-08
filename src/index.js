@@ -12,7 +12,7 @@ export default {
     packageName`stylelint-declaration-block-no-ignored-properties`,
   ],
   rules: {
-    'csstools/use-nesting': ['always', { except: /&:(hover|focus)/ }],
+    'csstools/use-nesting': 'always',
     'no-empty-source': null,
     'plugin/declaration-block-no-ignored-properties': true,
     'selector-pseudo-class-no-unknown': [
