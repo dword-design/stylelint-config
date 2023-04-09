@@ -1,3 +1,10 @@
+## [2.0.12](https://github.com/dword-design/stylelint-config/compare/v2.0.11...v2.0.12) (2023-04-09)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v4.1.7 ([0e11f59](https://github.com/dword-design/stylelint-config/commit/0e11f591d3b09e1b5c5c5b6ffbd6348e254332ee))
+
 ## [2.0.11](https://github.com/dword-design/stylelint-config/compare/v2.0.10...v2.0.11) (2023-04-09)
 
 
