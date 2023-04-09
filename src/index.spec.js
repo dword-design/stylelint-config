@@ -8,9 +8,12 @@ import {
   property,
   values,
 } from '@dword-design/functions'
+import { execaCommand } from 'execa'
+import fs from 'fs-extra'
 import stylelint from 'stylelint'
+import withLocalTmpDir from 'with-local-tmp-dir'
 
-import config from './index'
+import config from './index.js'
 
 const runTest = test => async () => {
   test = { messages: [], output: test.code, ...test }
@@ -55,229 +58,241 @@ const runTest = test => async () => {
 }
 
 export default {
-  'empty file': {
-    code: '',
-  },
-  global: {
-    code: endent`
-      :global(.foo) {
-        background: red;
-      }
-
-    `,
-  },
-  'indent too big': {
-    code: endent`
-      body {
+  ...({
+    'empty file': {
+      code: '',
+    },
+    global: {
+      code: endent`
+        :global(.foo) {
           background: red;
-      }
-
-    `,
-    messages: ['Delete "··" (prettier/prettier)'],
-    output: endent`
-      body {
-        background: red;
-      }
-
-    `,
-  },
-  'nesting: inner nesting pseudo selector': {
-    code: endent`
-      body {
-        margin: 0.5rem;
-
-        img {
-          padding: 0;
         }
+
+      `,
+    },
+    'indent too big': {
+      code: endent`
+        body {
+            background: red;
+        }
+
+      `,
+      messages: ['Delete "··" (prettier/prettier)'],
+      output: endent`
+        body {
+          background: red;
+        }
+
+      `,
+    },
+    'nesting: inner nesting pseudo selector': {
+      code: endent`
+        body {
+          margin: 0.5rem;
+
+          img {
+            padding: 0;
+          }
+
+          &:hover img {
+            padding: 0.5rem;
+          }
+        }
+
+      `,
+      result: endent`
+        body {
+          margin: 0.5rem;
+
+          img {
+            padding: 0;
+          }
 
         &:hover img {
           padding: 0.5rem;
         }
-      }
-
-    `,
-    result: endent`
-      body {
-        margin: 0.5rem;
-
-        img {
-          padding: 0;
         }
 
-      &:hover img {
-        padding: 0.5rem;
-      }
-      }
+      `,
+    },
+    'no blank line at inner selector': {
+      code: endent`
+        body {
+          .foo {
+            background: red;
+          }
+        }
 
-    `,
-  },
-  'no blank line at inner selector': {
-    code: endent`
-      body {
-        .foo {
+      `,
+    },
+    'no blank line between selectors': {
+      code: endent`
+        body {
           background: red;
         }
-      }
+        html {
+          background: green;
+        }
 
-    `,
-  },
-  'no blank line between selectors': {
-    code: endent`
-      body {
-        background: red;
-      }
-      html {
-        background: green;
-      }
+      `,
+    },
+    'no leading zero': {
+      code: endent`
+        body {
+          margin: .5rem;
+        }
 
-    `,
-  },
-  'no leading zero': {
-    code: endent`
-      body {
-        margin: .5rem;
-      }
+      `,
+      messages: ['Insert "0" (prettier/prettier)'],
+      output: endent`
+        body {
+          margin: 0.5rem;
+        }
 
-    `,
-    messages: ['Insert "0" (prettier/prettier)'],
-    output: endent`
-      body {
-        margin: 0.5rem;
-      }
-      
-    `,
-  },
-  'no nesting: attribute': {
-    code: endent`
-      body {
-        margin: 0.5rem;
-      }
+      `,
+    },
+    'no nesting: attribute': {
+      code: endent`
+        body {
+          margin: 0.5rem;
+        }
 
-      body[data-foo] {
-        padding: 0.5rem;
-      }
-
-    `,
-    messages: [
-      'Expected "body[data-foo]" inside "body". (csstools/use-nesting)',
-    ],
-    output: endent`
-      body {
-        margin: 0.5rem;
-
-        &[data-foo] {
+        body[data-foo] {
           padding: 0.5rem;
         }
-      }
 
-    `,
-  },
-  'no nesting: child': {
-    code: endent`
-      body {
-        margin: 0.5rem;
-      }
+      `,
+      messages: [
+        'Expected "body[data-foo]" inside "body". (csstools/use-nesting)',
+      ],
+      output: endent`
+        body {
+          margin: 0.5rem;
 
-      body .foo {
-        padding: 0.5rem;
-      }
+          &[data-foo] {
+            padding: 0.5rem;
+          }
+        }
 
-    `,
-    messages: ['Expected "body .foo" inside "body". (csstools/use-nesting)'],
-    output: endent`
-      body {
-        margin: 0.5rem;
+      `,
+    },
+    'no nesting: child': {
+      code: endent`
+        body {
+          margin: 0.5rem;
+        }
 
-        & .foo {
+        body .foo {
           padding: 0.5rem;
         }
-      }
 
-    `,
-  },
-  'no nesting: class': {
-    code: endent`
-      body {
-        margin: 0.5rem;
-      }
+      `,
+      messages: ['Expected "body .foo" inside "body". (csstools/use-nesting)'],
+      output: endent`
+        body {
+          margin: 0.5rem;
 
-      body.foo {
-        padding: 0.5rem;
-      }
+          & .foo {
+            padding: 0.5rem;
+          }
+        }
 
-    `,
-    messages: ['Expected "body.foo" inside "body". (csstools/use-nesting)'],
-    output: endent`
-      body {
-        margin: 0.5rem;
+      `,
+    },
+    'no nesting: class': {
+      code: endent`
+        body {
+          margin: 0.5rem;
+        }
 
-        &.foo {
+        body.foo {
           padding: 0.5rem;
         }
-      }
 
-    `,
-  },
-  'no nesting: pseudo selector': {
-    code: endent`
-      body {
-        margin: 0.5rem;
-      }
+      `,
+      messages: ['Expected "body.foo" inside "body". (csstools/use-nesting)'],
+      output: endent`
+        body {
+          margin: 0.5rem;
 
-      body:hover {
-        padding: 0.5rem;
-      }
+          &.foo {
+            padding: 0.5rem;
+          }
+        }
 
-    `,
-    messages: ['Expected "body:hover" inside "body". (csstools/use-nesting)'],
-    output: endent`
-      body {
-        margin: 0.5rem;
+      `,
+    },
+    'no nesting: pseudo selector': {
+      code: endent`
+        body {
+          margin: 0.5rem;
+        }
 
-        &:hover {
+        body:hover {
           padding: 0.5rem;
         }
-      }
 
-    `,
-  },
-  sass: {
-    code: endent`
-      %foo {
-        background: red;
-      }
+      `,
+      messages: ['Expected "body:hover" inside "body". (csstools/use-nesting)'],
+      output: endent`
+        body {
+          margin: 0.5rem;
 
-      body {
-        @extend %foo;
-      }
+          &:hover {
+            padding: 0.5rem;
+          }
+        }
 
-    `,
-  },
-  valid: {
-    code: endent`
-      body {
-        background: red;
-      }
+      `,
+    },
+    sass: {
+      code: endent`
+        %foo {
+          background: red;
+        }
 
-    `,
-  },
-  'wrong property order': {
-    code: endent`
-      body {
-        background: red;
-        position: absolute;
-      }
+        body {
+          @extend %foo;
+        }
 
-    `,
-    messages: [
-      'Expected "position" to come before "background" (order/properties-order)',
-    ],
-    output: endent`
-      body {
-        position: absolute;
-        background: red;
-      }
+      `,
+    },
+    valid: {
+      code: endent`
+        body {
+          background: red;
+        }
 
-    `,
-  },
-} |> mapValues(runTest)
+      `,
+    },
+    'wrong property order': {
+      code: endent`
+        body {
+          background: red;
+          position: absolute;
+        }
+
+      `,
+      messages: [
+        'Expected "position" to come before "background" (order/properties-order)',
+      ],
+      output: endent`
+        body {
+          position: absolute;
+          background: red;
+        }
+
+      `,
+    },
+  } |> mapValues(runTest)),
+  before: () => execaCommand('base prepublishOnly'),
+  cli: () =>
+    withLocalTmpDir(async () => {
+      await fs.outputFile(
+        '.stylelintrc.json',
+        JSON.stringify({ extends: '..' }),
+      )
+      await fs.outputFile('index.scss', '')
+      await execaCommand('stylelint index.scss')
+    }),
+}
