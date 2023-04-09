@@ -21,7 +21,7 @@
     "test": "base test"
   },
   "dependencies": {
-    "depcheck-package-name": "^2.0.0",
+    "depcheck-package-name": "^3.0.0",
     "stylelint-config-hudochenkov": "^5.0.0",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-recommended-scss": "^4.2.0",
