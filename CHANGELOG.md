@@ -1,3 +1,10 @@
+## [2.0.10](https://github.com/dword-design/stylelint-config/compare/v2.0.9...v2.0.10) (2023-04-09)
+
+
+### Bug Fixes
+
+* upgrades ([fd96dd2](https://github.com/dword-design/stylelint-config/commit/fd96dd209889cc85e16b7d07c82ff9dbb1b532a4))
+
 ## [2.0.9](https://github.com/dword-design/stylelint-config/compare/v2.0.8...v2.0.9) (2023-04-09)
 
 
