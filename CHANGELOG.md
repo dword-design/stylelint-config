@@ -1,3 +1,10 @@
+## [2.0.9](https://github.com/dword-design/stylelint-config/compare/v2.0.8...v2.0.9) (2023-04-09)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#109](https://github.com/dword-design/stylelint-config/issues/109)) ([18c24fe](https://github.com/dword-design/stylelint-config/commit/18c24fe0796481374d34594e117ac453d5e7e314))
+
 ## [2.0.8](https://github.com/dword-design/stylelint-config/compare/v2.0.7...v2.0.8) (2023-02-15)
 
 
