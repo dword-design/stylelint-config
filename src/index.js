@@ -2,8 +2,6 @@ import packageName from 'depcheck-package-name'
 
 export default {
   extends: [
-    packageName`stylelint-config-standard`,
-    packageName`stylelint-config-recommended-scss`,
     `${packageName`stylelint-config-hudochenkov`}/order`,
     `${packageName`stylelint-prettier`}/recommended`,
   ],
