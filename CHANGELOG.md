@@ -1,3 +1,10 @@
+## [2.0.13](https://github.com/dword-design/stylelint-config/compare/v2.0.12...v2.0.13) (2023-04-10)
+
+
+### Bug Fixes
+
+* update dependency with-local-tmp-dir to v5.0.1 ([37598f9](https://github.com/dword-design/stylelint-config/commit/37598f9dcf5550b9e1e4f1f965adde3c8d6ea67b))
+
 ## [2.0.12](https://github.com/dword-design/stylelint-config/compare/v2.0.11...v2.0.12) (2023-04-09)
 
 
