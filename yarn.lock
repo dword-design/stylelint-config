@@ -1191,19 +1191,19 @@
     "@jridgewell/trace-mapping" "0.3.9"
 
 "@csstools/css-parser-algorithms@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@csstools/css-parser-algorithms/-/css-parser-algorithms-2.1.0.tgz#c0a605b0218790faeb5911f240964891c6031501"
-  integrity sha512-KP8TicdXpUyeB1NMlbHud/1l39xvLGvqNFWMpG4qC6H1zs9SadGUHe5SO92n/659sDW9aGDvm9AMru0DZkN1Bw==
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@csstools/css-parser-algorithms/-/css-parser-algorithms-2.1.1.tgz#7b62e6412a468a2d1096ed267edd1e4a7fd4a119"
+  integrity sha512-viRnRh02AgO4mwIQb2xQNJju0i+Fh9roNgmbR5xEuG7J3TGgxjnE95HnBLgsFJOJOksvcfxOUCgODcft6Y07cA==
 
 "@csstools/css-tokenizer@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@csstools/css-tokenizer/-/css-tokenizer-2.1.0.tgz#fee4de3d444db3ce9007f3af6474af8ba3e4b930"
-  integrity sha512-dtqFyoJBHUxGi9zPZdpCKP1xk8tq6KPHJ/NY4qWXiYo6IcSGwzk3L8x2XzZbbyOyBs9xQARoGveU2AsgLj6D2A==
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@csstools/css-tokenizer/-/css-tokenizer-2.1.1.tgz#07ae11a0a06365d7ec686549db7b729bc036528e"
+  integrity sha512-GbrTj2Z8MCTUv+52GE0RbFGM527xuXZ0Xa5g0Z+YN573uveS4G0qi6WNOMyz3yrFM/jaILTTwJ0+umx81EzqfA==
 
 "@csstools/media-query-list-parser@^2.0.1":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@csstools/media-query-list-parser/-/media-query-list-parser-2.0.2.tgz#36058f8ff6a28274e7dfe32e48431e1de97c2fbb"
-  integrity sha512-8V6JD8Av1HttuClYr1ZBu0LRVe5Nnz4qrv8RppO8mobsX/USBHZy5JQOXYIlpOVhl46nzkx3X5cfH6CqUghjrQ==
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@csstools/media-query-list-parser/-/media-query-list-parser-2.0.4.tgz#466bd254041530dfd1e88bcb1921e8ca4af75b6a"
+  integrity sha512-GyYot6jHgcSDZZ+tLSnrzkR7aJhF2ZW6d+CXH66mjy5WpAQhZD4HDke2OQ36SivGRWlZJpAz7TzbW6OKlEpxAA==
 
 "@csstools/selector-specificity@^2.2.0":
   version "2.2.0"
@@ -1211,9 +1211,9 @@
   integrity sha512-+OJ9konv95ClSTOJCmMZqpd5+YGsB2S+x6w3E1oaM8UuR5j8nTNHYSz8c9BEPGDOCMQYIEEGlVPj/VY64iTbGw==
 
 "@dword-design/babel-config@^2.0.0", "@dword-design/babel-config@^2.1.1":
-  version "2.2.8"
-  resolved "https://registry.yarnpkg.com/@dword-design/babel-config/-/babel-config-2.2.8.tgz#4d4000181a3585609b9ef1faad60229ff04c883e"
-  integrity sha512-zClhSwl7nX43T/PT0GPN9W0psMuc4bVOp1PeWpEESwpBJqyvqZfGKr6VxP1a7sQeWGJq5fL7mB+soTXCTLbMPQ==
+  version "2.2.9"
+  resolved "https://registry.yarnpkg.com/@dword-design/babel-config/-/babel-config-2.2.9.tgz#241ea2ccb890088ceced1130512d4519ffba9b56"
+  integrity sha512-Y6TeYeVV4fAXUXOVpGK44UqY5HiPH445fvvrHHoTxhbucP5NC6Dn/ibK6Psd2pfO4BY3hgrlMBh5kzJCuvmXiQ==
   dependencies:
     "@babel/plugin-proposal-optional-chaining" "^7.6.0"
     "@babel/plugin-proposal-pipeline-operator" "^7.5.0"
@@ -1410,9 +1410,9 @@
     "@dword-design/functions" "^4.0.7"
 
 "@dword-design/pretest@^1.0.0":
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/@dword-design/pretest/-/pretest-1.0.12.tgz#fcf2fa163ebe35c4566b72b2d4ba243df0b837d8"
-  integrity sha512-StTQpZA5rRnPBkIay2BO09ZJzaVw5B7MX0tITDS6rQ8iUQ1600i6dupyXBxkv3lrXu1jxNwxPhAcZQZY9oBsyA==
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/@dword-design/pretest/-/pretest-1.0.13.tgz#c35e586b5015a27df90e3d0f1f8664c5a9f10c13"
+  integrity sha512-KM7eTRC0jCN8m6ZRx1QhW2+rqq82Ssp7LP4oClDpMrRlZEpBVih4Zpc5P5bae4IKeejxGSQT10cqDLYwjnuZFw==
   dependencies:
     expect "^29.4.0"
     expect-mocha-image-snapshot "^3.0.1"
@@ -1424,9 +1424,9 @@
   integrity sha512-W861E4cbZmUaYri3mhZNfpo2Yxc1hHPP0v5iDZGE+h9EHplY+8tzWaTNHIF67DmrcDLP79zxd/lkJX0xZs0l8Q==
 
 "@dword-design/suppress-babel-register-esm-warning@^1.1.0":
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/@dword-design/suppress-babel-register-esm-warning/-/suppress-babel-register-esm-warning-1.1.5.tgz#ad112eb2913bf73c4a2b4f3fd94f4d0c675b943a"
-  integrity sha512-3TTyQk1qvkkmj3lHnV78IcHouFl+s/iTpi9qqcUOEG8Sny+r70tK0KFoBdv9hIAhIu76kuSsNtLuqM4v0h6pMA==
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@dword-design/suppress-babel-register-esm-warning/-/suppress-babel-register-esm-warning-1.1.6.tgz#1f5ed48dfdd0a2df1a378123fdf497feb7f557ca"
+  integrity sha512-iue90rK4scr6zo4Gqwxc+3sjNC1Hxz/k0FCgaql1oL7FdM5KzmsrDcNp5xZuOMLB/75Ly3kPzJqR7dH758Mi3A==
 
 "@eslint-community/eslint-utils@^4.1.2", "@eslint-community/eslint-utils@^4.2.0", "@eslint-community/eslint-utils@^4.3.0":
   version "4.4.0"
@@ -3992,9 +3992,9 @@ delete-empty@^3.0.0:
     rimraf "^2.6.2"
 
 depcheck-detector-execa@^3.0.4:
-  version "3.0.24"
-  resolved "https://registry.yarnpkg.com/depcheck-detector-execa/-/depcheck-detector-execa-3.0.24.tgz#6221ba12efc5deafa00af67464d29206b51947af"
-  integrity sha512-HYllvlOpxGT/OSQFUUajsowb/KxKJRLg0QkGdkR0J9hwJi1vASB6fhRD0PV1YFplfUL/RqxvBx0P/koeMPD/6w==
+  version "3.0.25"
+  resolved "https://registry.yarnpkg.com/depcheck-detector-execa/-/depcheck-detector-execa-3.0.25.tgz#5e904a00fde06dbc21d3f4a1f8a2fe0daab421b8"
+  integrity sha512-gz0lw8OW2/RX0ypYghxKz/oji3dg8p2/2jw/M0QKtY5i5lqIUl3MrNSak0UgmwIPGm+nQkFEvXAIh2SjpLrwjg==
   dependencies:
     "@dword-design/functions" "^4.0.0"
     fs-extra "^11.1.0"
@@ -4193,9 +4193,9 @@ duplexer2@~0.1.0:
     readable-stream "^2.0.2"
 
 electron-to-chromium@^1.4.284:
-  version "1.4.356"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.356.tgz#b75a8a8c31d571f6024310cc980a08cd6c15a8c5"
-  integrity sha512-nEftV1dRX3omlxAj42FwqRZT0i4xd2dIg39sog/CnCJeCcL1TRd2Uh0i9Oebgv8Ou0vzTPw++xc+Z20jzS2B6A==
+  version "1.4.357"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.357.tgz#ad02bab69e696e9a122788da4460c86166a98a01"
+  integrity sha512-UTkCbNTAcGXABmEnQrGcW4m3cG6fcyBfD4KDF0iyEAlbrGZiY9dmslyDAGOD1Kr5biN2F743Y30aRCOtau35Vw==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -8933,9 +8933,9 @@ os-tmpdir@~1.0.2:
   integrity sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==
 
 output-files@^2.0.0:
-  version "2.0.23"
-  resolved "https://registry.yarnpkg.com/output-files/-/output-files-2.0.23.tgz#d7fb13fca4ba425f78f35048ac086ec3601bdbad"
-  integrity sha512-55SUoGYSgs5ODyJ4nwb6UE0kkbFYwEgRQlPtIcxbTZX5PLXA3QumBWfBCNP9qNlQNNzNI+wnrJZzN/nXHE7bHQ==
+  version "2.0.25"
+  resolved "https://registry.yarnpkg.com/output-files/-/output-files-2.0.25.tgz#134de6f795816250b5a947581d82b8c965e391ef"
+  integrity sha512-5hM8xmd+n2yVKLjewZkrkRLhs4jebc9O2xf5vxVZkUDTqr6dvhTaTr/xWOw3SE3D8aAjXI7s5ETN3wz1nGK8oA==
   dependencies:
     "@dword-design/functions" "^4.0.0"
     fs-extra "^11.1.0"
@@ -10737,6 +10737,7 @@ stylelint-prettier@^3.0.0:
 
 stylelint-use-nesting@dword-design/stylelint-use-nesting#fork:
   version "3.0.0"
+  uid "3fa262d8898e33da3831ed526e45dade37c270e7"
   resolved "https://codeload.github.com/dword-design/stylelint-use-nesting/tar.gz/3fa262d8898e33da3831ed526e45dade37c270e7"
 
 stylelint@^15.4.0:
