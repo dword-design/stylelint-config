@@ -1,3 +1,10 @@
+## [2.0.15](https://github.com/dword-design/stylelint-config/compare/v2.0.14...v2.0.15) (2023-04-12)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base to v9.5.17 ([4e7d325](https://github.com/dword-design/stylelint-config/commit/4e7d325928b70686da0331adc6d85ab75f941db0))
+
 ## [2.0.14](https://github.com/dword-design/stylelint-config/compare/v2.0.13...v2.0.14) (2023-04-11)
 
 
