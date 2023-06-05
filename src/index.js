@@ -5,6 +5,7 @@ export default {
     packageName`stylelint-config-standard-scss`,
     `${packageName`stylelint-config-hudochenkov`}/order`,
     `${packageName`stylelint-prettier`}/recommended`,
+    `${packageName`stylelint-config-recommended-vue`}/scss`,
   ],
   plugins: [
     packageName`stylelint-use-nesting`,

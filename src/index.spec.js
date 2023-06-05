@@ -231,6 +231,21 @@ export default tester(
 
       `,
     },
+    vue: {
+      code: endent`
+        <template>
+          <div />
+        </template>
+
+        <style lang="scss" scoped>
+        .foo {
+          color: red;
+        }
+        </style>
+
+      `,
+      filename: 'index.vue',
+    },
     'wrong property order': {
       code: endent`
         body {
@@ -259,6 +274,7 @@ export default tester(
         const messages =
           stylelint.lint({
             code: test.code,
+            codeFilename: test.filename,
             config,
           })
           |> await
@@ -278,6 +294,7 @@ export default tester(
         const firstOutput =
           stylelint.lint({
             code: test.code,
+            codeFilename: test.filename,
             config,
             fix: true,
           })
@@ -287,6 +304,7 @@ export default tester(
         const output =
           stylelint.lint({
             code: firstOutput,
+            codeFilename: test.filename,
             config,
             fix: true,
           })
