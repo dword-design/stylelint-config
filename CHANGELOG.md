@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/dword-design/stylelint-config/compare/v3.0.0...v3.0.1) (2023-06-05)
+
+
+### Bug Fixes
+
+* vue support ([976b031](https://github.com/dword-design/stylelint-config/commit/976b031b6db0940f885349071486bcf2abbf232c))
+
 # [3.0.0](https://github.com/dword-design/stylelint-config/compare/v2.0.19...v3.0.0) (2023-06-05)
 
 
