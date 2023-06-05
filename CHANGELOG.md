@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/dword-design/stylelint-config/compare/v2.0.19...v3.0.0) (2023-06-05)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#130](https://github.com/dword-design/stylelint-config/issues/130)) ([ec9de7e](https://github.com/dword-design/stylelint-config/commit/ec9de7e873ca608235cdddb2f7a4e24ef0687fee))
+
+
+### BREAKING CHANGES
+
+* drop node 14
+
 ## [2.0.19](https://github.com/dword-design/stylelint-config/compare/v2.0.18...v2.0.19) (2023-05-13)
 
 
