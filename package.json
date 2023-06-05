@@ -20,6 +20,9 @@
     "prepublishOnly": "base prepublishOnly",
     "test": "base test"
   },
+  "resolutions": {
+    "stylelint/cosmiconfig": "8.1.3"
+  },
   "dependencies": {
     "depcheck-package-name": "^3.0.0",
     "jiti": "^1.18.2",
