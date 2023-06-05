@@ -3,62 +3,17 @@ import {
   first,
   flatten,
   map,
-  mapValues,
   pick,
   property,
   values,
 } from '@dword-design/functions'
-import { execaCommand } from 'execa'
-import fs from 'fs-extra'
+import tester from '@dword-design/tester'
 import stylelint from 'stylelint'
-import withLocalTmpDir from 'with-local-tmp-dir'
 
 import config from './index.js'
 
-const runTest = test => async () => {
-  test = { messages: [], output: test.code, ...test }
-
-  const messages =
-    stylelint.lint({
-      code: test.code,
-      config,
-    })
-    |> await
-    |> property('results')
-    |> first
-    |> pick([
-      'deprecations',
-      'invalidOptionWarnings',
-      'parseErrors',
-      'warnings',
-    ])
-    |> values
-    |> flatten
-    |> map('text')
-  expect(messages).toEqual(test.messages)
-
-  const firstOutput =
-    stylelint.lint({
-      code: test.code,
-      config,
-      fix: true,
-    })
-    |> await
-    |> property('output')
-
-  const output =
-    stylelint.lint({
-      code: firstOutput,
-      config,
-      fix: true,
-    })
-    |> await
-    |> property('output')
-  expect(output).toEqual(test.output)
-}
-
-export default {
-  ...({
+export default tester(
+  {
     'empty file': {
       code: '',
     },
@@ -130,6 +85,17 @@ export default {
         body {
           background: red;
         }
+        html {
+          background: green;
+        }
+
+      `,
+      messages: ['Expected empty line before rule (rule-empty-line-before)'],
+      output: endent`
+        body {
+          background: red;
+        }
+
         html {
           background: green;
         }
@@ -284,15 +250,50 @@ export default {
 
       `,
     },
-  } |> mapValues(runTest)),
-  before: () => execaCommand('base prepublishOnly'),
-  cli: () =>
-    withLocalTmpDir(async () => {
-      await fs.outputFile(
-        '.stylelintrc.json',
-        JSON.stringify({ extends: '..' }),
-      )
-      await fs.outputFile('index.scss', '')
-      await execaCommand('stylelint index.scss')
-    }),
-}
+  },
+  [
+    {
+      transform: test => async () => {
+        test = { messages: [], output: test.code, ...test }
+
+        const messages =
+          stylelint.lint({
+            code: test.code,
+            config,
+          })
+          |> await
+          |> property('results')
+          |> first
+          |> pick([
+            'deprecations',
+            'invalidOptionWarnings',
+            'parseErrors',
+            'warnings',
+          ])
+          |> values
+          |> flatten
+          |> map('text')
+        expect(messages).toEqual(test.messages)
+
+        const firstOutput =
+          stylelint.lint({
+            code: test.code,
+            config,
+            fix: true,
+          })
+          |> await
+          |> property('output')
+
+        const output =
+          stylelint.lint({
+            code: firstOutput,
+            config,
+            fix: true,
+          })
+          |> await
+          |> property('output')
+        expect(output).toEqual(test.output)
+      },
+    },
+  ],
+)
