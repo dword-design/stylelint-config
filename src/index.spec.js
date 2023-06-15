@@ -21,23 +21,27 @@ export default tester(
       code: endent`
         :global(.foo) {
           background: red;
-        }
-
+        }\n
+      `,
+    },
+    'global function': {
+      code: endent`
+        body {
+          background: lighten(red, 10%);
+        }\n
       `,
     },
     'indent too big': {
       code: endent`
         body {
             background: red;
-        }
-
+        }\n
       `,
       messages: ['Delete "··" (prettier/prettier)'],
       output: endent`
         body {
           background: red;
-        }
-
+        }\n
       `,
     },
     'nesting: inner nesting pseudo selector': {
@@ -52,8 +56,7 @@ export default tester(
           &:hover img {
             padding: 0.5rem;
           }
-        }
-
+        }\n
       `,
       result: endent`
         body {
@@ -66,8 +69,7 @@ export default tester(
         &:hover img {
           padding: 0.5rem;
         }
-        }
-
+        }\n
       `,
     },
     'no blank line at inner selector': {
@@ -76,8 +78,7 @@ export default tester(
           .foo {
             background: red;
           }
-        }
-
+        }\n
       `,
     },
     'no blank line between selectors': {
@@ -87,8 +88,7 @@ export default tester(
         }
         html {
           background: green;
-        }
-
+        }\n
       `,
       messages: ['Expected empty line before rule (rule-empty-line-before)'],
       output: endent`
@@ -98,23 +98,20 @@ export default tester(
 
         html {
           background: green;
-        }
-
+        }\n
       `,
     },
     'no leading zero': {
       code: endent`
         body {
           margin: .5rem;
-        }
-
+        }\n
       `,
       messages: ['Insert "0" (prettier/prettier)'],
       output: endent`
         body {
           margin: 0.5rem;
-        }
-
+        }\n
       `,
     },
     'no nesting: attribute': {
@@ -125,8 +122,7 @@ export default tester(
 
         body[data-foo] {
           padding: 0.5rem;
-        }
-
+        }\n
       `,
       messages: [
         'Expected "body[data-foo]" inside "body". (csstools/use-nesting)',
@@ -138,8 +134,7 @@ export default tester(
           &[data-foo] {
             padding: 0.5rem;
           }
-        }
-
+        }\n
       `,
     },
     'no nesting: child': {
@@ -150,8 +145,7 @@ export default tester(
 
         body .foo {
           padding: 0.5rem;
-        }
-
+        }\n
       `,
       messages: ['Expected "body .foo" inside "body". (csstools/use-nesting)'],
       output: endent`
@@ -161,8 +155,7 @@ export default tester(
           & .foo {
             padding: 0.5rem;
           }
-        }
-
+        }\n
       `,
     },
     'no nesting: class': {
@@ -173,8 +166,7 @@ export default tester(
 
         body.foo {
           padding: 0.5rem;
-        }
-
+        }\n
       `,
       messages: ['Expected "body.foo" inside "body". (csstools/use-nesting)'],
       output: endent`
@@ -184,8 +176,7 @@ export default tester(
           &.foo {
             padding: 0.5rem;
           }
-        }
-
+        }\n
       `,
     },
     'no nesting: pseudo selector': {
@@ -196,8 +187,7 @@ export default tester(
 
         body:hover {
           padding: 0.5rem;
-        }
-
+        }\n
       `,
       messages: ['Expected "body:hover" inside "body". (csstools/use-nesting)'],
       output: endent`
@@ -207,8 +197,7 @@ export default tester(
           &:hover {
             padding: 0.5rem;
           }
-        }
-
+        }\n
       `,
     },
     sass: {
@@ -219,16 +208,14 @@ export default tester(
 
         body {
           @extend %foo;
-        }
-
+        }\n
       `,
     },
     valid: {
       code: endent`
         body {
           background: red;
-        }
-
+        }\n
       `,
     },
     vue: {
@@ -241,8 +228,7 @@ export default tester(
         .foo {
           color: red;
         }
-        </style>
-
+        </style>\n
       `,
       filename: 'index.vue',
     },
@@ -251,8 +237,7 @@ export default tester(
         body {
           background: red;
           position: absolute;
-        }
-
+        }\n
       `,
       messages: [
         'Expected "position" to come before "background" (order/properties-order)',
@@ -261,8 +246,7 @@ export default tester(
         body {
           position: absolute;
           background: red;
-        }
-
+        }\n
       `,
     },
   },

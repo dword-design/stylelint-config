@@ -15,6 +15,7 @@ export default {
     'csstools/use-nesting': ['always', { except: /&:(hover|focus)/ }],
     'no-empty-source': null,
     'plugin/declaration-block-no-ignored-properties': true,
+    'scss/no-global-function-names': null,
     'selector-pseudo-class-no-unknown': [
       true,
       {
