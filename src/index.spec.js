@@ -283,7 +283,7 @@ export default tester(
             fix: true,
           })
           |> await
-          |> property('output')
+          |> property('code')
 
         const output =
           stylelint.lint({
@@ -293,7 +293,7 @@ export default tester(
             fix: true,
           })
           |> await
-          |> property('output')
+          |> property('code')
         expect(output).toEqual(test.output)
       },
     },

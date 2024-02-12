@@ -1,4 +1,5 @@
 import packageName from 'depcheck-package-name'
+import stylelintUseNesting from 'stylelint-use-nesting'
 
 export default {
   extends: [
@@ -8,7 +9,7 @@ export default {
     `${packageName`stylelint-config-recommended-vue`}/scss`,
   ],
   plugins: [
-    packageName`stylelint-use-nesting`,
+    stylelintUseNesting, // "CommonJS plugins are deprecated" error when listing it as a string
     packageName`stylelint-declaration-block-no-ignored-properties`,
   ],
   rules: {
