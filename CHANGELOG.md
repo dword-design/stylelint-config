@@ -1,3 +1,15 @@
+# [4.0.0](https://github.com/dword-design/stylelint-config/compare/v3.0.3...v4.0.0) (2024-02-12)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#133](https://github.com/dword-design/stylelint-config/issues/133)) ([380e7d0](https://github.com/dword-design/stylelint-config/commit/380e7d08989ac1e8d11e1e04f8dddc0f7f98b0cf))
+
+
+### BREAKING CHANGES
+
+* node.js >= 18
+
 ## [3.0.3](https://github.com/dword-design/stylelint-config/compare/v3.0.2...v3.0.3) (2023-06-15)
 
 
