@@ -30,7 +30,7 @@
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-order": "^6.0.3",
     "stylelint-prettier": "^5.0.0",
-    "stylelint-use-nesting": "^4.1.0"
+    "stylelint-use-nesting": "^6.0.0"
   },
   "devDependencies": {
     "@dword-design/base": "^11.0.3",
