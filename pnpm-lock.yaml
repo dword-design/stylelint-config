@@ -33,8 +33,8 @@ importers:
         specifier: ^5.0.0
         version: 5.0.2(prettier@3.4.2)(stylelint@16.12.0(typescript@5.7.2))
       stylelint-use-nesting:
-        specifier: ^4.1.0
-        version: 4.1.0(stylelint@16.12.0(typescript@5.7.2))
+        specifier: ^6.0.0
+        version: 6.0.0(stylelint@16.12.0(typescript@5.7.2))
     devDependencies:
       '@dword-design/base':
         specifier: ^11.0.3
@@ -5498,11 +5498,11 @@ packages:
     peerDependencies:
       stylelint: ^16.0.2
 
-  stylelint-use-nesting@4.1.0:
-    resolution: {integrity: sha512-DDI+T/8kGIxdcfPClxp/oS2cFSWvd+hoV54clF7lnrlSvYHOQouaxgMOuPmkIQig0suss/PrAw5GwBYoSu8WoQ==}
-    engines: {node: '>=16.0.0'}
+  stylelint-use-nesting@6.0.0:
+    resolution: {integrity: sha512-5/Icok0O35pU3DpHRmISTsElba2btHpPlNcbVrwy6AhapIPKE1QqaMslYhI0Cjt5/w4ALS4iICde9BhVq7HYKA==}
+    engines: {node: '>=20.0.0'}
     peerDependencies:
-      stylelint: '>= 10'
+      stylelint: '>= 16.9.0'
 
   stylelint@16.12.0:
     resolution: {integrity: sha512-F8zZ3L/rBpuoBZRvI4JVT20ZanPLXfQLzMOZg1tzPflRVh9mKpOZ8qcSIhh1my3FjAjZWG4T2POwGnmn6a6hbg==}
@@ -12706,7 +12706,7 @@ snapshots:
       postcss-value-parser: 4.2.0
       stylelint: 16.12.0(typescript@5.7.2)
 
-  stylelint-use-nesting@4.1.0(stylelint@16.12.0(typescript@5.7.2)):
+  stylelint-use-nesting@6.0.0(stylelint@16.12.0(typescript@5.7.2)):
     dependencies:
       stylelint: 16.12.0(typescript@5.7.2)
 
