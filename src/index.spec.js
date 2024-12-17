@@ -6,17 +6,15 @@ import {
   pick,
   property,
   values,
-} from '@dword-design/functions'
-import tester from '@dword-design/tester'
-import stylelint from 'stylelint'
+} from '@dword-design/functions';
+import tester from '@dword-design/tester';
+import stylelint from 'stylelint';
 
-import config from './index.js'
+import config from './index.js';
 
 export default tester(
   {
-    'empty file': {
-      code: '',
-    },
+    'empty file': { code: '' },
     global: {
       code: endent`
         :global(.foo) {
@@ -253,7 +251,7 @@ export default tester(
   [
     {
       transform: test => async () => {
-        test = { messages: [], output: test.code, ...test }
+        test = { messages: [], output: test.code, ...test };
 
         const messages =
           stylelint.lint({
@@ -272,8 +270,9 @@ export default tester(
           ])
           |> values
           |> flatten
-          |> map('text')
-        expect(messages).toEqual(test.messages)
+          |> map('text');
+
+        expect(messages).toEqual(test.messages);
 
         const firstOutput =
           stylelint.lint({
@@ -283,7 +282,7 @@ export default tester(
             fix: true,
           })
           |> await
-          |> property('code')
+          |> property('code');
 
         const output =
           stylelint.lint({
@@ -293,9 +292,10 @@ export default tester(
             fix: true,
           })
           |> await
-          |> property('code')
-        expect(output).toEqual(test.output)
+          |> property('code');
+
+        expect(output).toEqual(test.output);
       },
     },
   ],
-)
+);
