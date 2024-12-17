@@ -8,7 +8,7 @@ export default {
     withLocalTmpDir(async () => {
       await fs.outputFile(
         '.stylelintrc.json',
-        JSON.stringify({ extends: '..' }),
+        JSON.stringify({ extends: '../dist/index.js' }),
       );
 
       await fs.outputFile('index.scss', '');
