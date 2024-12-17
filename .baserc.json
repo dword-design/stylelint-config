@@ -5,6 +5,5 @@
       "stylelint-config-prettier",
       "stylelint-order"
     ]
-  },
-  "cjsFallback": true
+  }
 }

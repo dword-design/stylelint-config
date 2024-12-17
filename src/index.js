@@ -1,5 +1,5 @@
-import packageName from 'depcheck-package-name'
-import stylelintUseNesting from 'stylelint-use-nesting'
+import packageName from 'depcheck-package-name';
+import stylelintUseNesting from 'stylelint-use-nesting';
 
 export default {
   extends: [
@@ -19,9 +19,7 @@ export default {
     'scss/no-global-function-names': null,
     'selector-pseudo-class-no-unknown': [
       true,
-      {
-        ignorePseudoClasses: ['global'],
-      },
+      { ignorePseudoClasses: ['global'] },
     ],
   },
-}
+};
