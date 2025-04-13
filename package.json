@@ -22,24 +22,24 @@
     "test": "base test"
   },
   "dependencies": {
-    "depcheck-package-name": "^3.0.0",
-    "postcss-html": "^1.5.0",
+    "depcheck-package-name": "^3.0.1",
+    "postcss-html": "^1.8.0",
     "stylelint-config-hudochenkov": "^11.0.0",
-    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-recommended-vue": "^1.6.0",
     "stylelint-config-standard-scss": "^14.0.0",
-    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
-    "stylelint-order": "^6.0.3",
-    "stylelint-prettier": "^5.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-prettier": "^5.0.3",
     "stylelint-use-nesting": "^6.0.0"
   },
   "devDependencies": {
-    "@dword-design/base": "^11.0.3",
-    "@dword-design/functions": "^6.0.1",
+    "@dword-design/base": "^11.2.10",
+    "@dword-design/functions": "^6.0.2",
     "@dword-design/tester": "^2.0.19",
     "execa": "^9.5.2",
-    "fs-extra": "^11.1.1",
-    "stylelint": "^16.2.1",
-    "with-local-tmp-dir": "^5.0.0"
+    "fs-extra": "^11.3.0",
+    "stylelint": "^16.18.0",
+    "with-local-tmp-dir": "^5.1.1"
   },
   "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c",
   "engines": {
