@@ -8,6 +8,30 @@ export default {
     `${packageName`stylelint-prettier`}/recommended`,
     `${packageName`stylelint-config-recommended-vue`}/scss`,
   ],
+  overrides: [
+    {
+      extends: [packageName`stylelint-config-tailwindcss`],
+      files: ['**/tailwind.css'],
+      rules: {
+        'at-rule-no-unknown': [
+          true,
+          {
+            ignoreAtRules: [
+              'tailwind',
+              'apply',
+              'layer',
+              'config',
+              'screen',
+              'variants',
+              'responsive',
+              'plugin',
+            ],
+          },
+        ],
+        'scss/at-rule-no-unknown': null,
+      },
+    },
+  ],
   plugins: [
     stylelintUseNesting, // "CommonJS plugins are deprecated" error when listing it as a string
     packageName`stylelint-declaration-block-no-ignored-properties`,

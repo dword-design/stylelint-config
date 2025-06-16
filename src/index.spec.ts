@@ -5,7 +5,15 @@ import stylelint from 'stylelint';
 
 import config from '.';
 
-const tests = {
+interface TestConfig {
+  code: string;
+  messages?: string[];
+  output?: string;
+  codeFilename?: string;
+  result?: string;
+}
+
+const tests: Record<string, TestConfig> = {
   'empty file': { code: '' },
   global: {
     code: endent`
@@ -201,6 +209,20 @@ const tests = {
       }\n
     `,
   },
+  'tailwind css': {
+    code: endent`
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      @layer components {
+        .btn-primary {
+          @apply py-2 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-700;
+        }
+      }\n
+    `,
+    codeFilename: 'tailwind.css',
+  },
   valid: {
     code: endent`
       body {
@@ -220,7 +242,7 @@ const tests = {
       }
       </style>\n
     `,
-    filename: 'index.vue',
+    codeFilename: 'index.vue',
   },
   'wrong property order': {
     code: endent`
@@ -249,7 +271,7 @@ for (const [name, _testConfig] of Object.entries(tests)) {
       results: [firstResult],
     } = await stylelint.lint({
       code: testConfig.code,
-      codeFilename: testConfig.filename,
+      codeFilename: testConfig.codeFilename,
       config,
     });
 
@@ -262,20 +284,20 @@ for (const [name, _testConfig] of Object.entries(tests)) {
       ]),
     )
       .flat()
-      .map(_ => _.text);
+      .map((warning: { text: string }) => warning.text);
 
     expect(messages).toEqual(testConfig.messages);
 
     const { code: firstOutput } = await stylelint.lint({
       code: testConfig.code,
-      codeFilename: testConfig.filename,
+      codeFilename: testConfig.codeFilename,
       config,
       fix: true,
     });
 
     const { code: output } = await stylelint.lint({
       code: firstOutput,
-      codeFilename: testConfig.filename,
+      codeFilename: testConfig.codeFilename,
       config,
       fix: true,
     });
