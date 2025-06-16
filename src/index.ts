@@ -12,24 +12,7 @@ export default {
     {
       extends: [packageName`stylelint-config-tailwindcss`],
       files: ['**/tailwind.css'],
-      rules: {
-        'at-rule-no-unknown': [
-          true,
-          {
-            ignoreAtRules: [
-              'tailwind',
-              'apply',
-              'layer',
-              'config',
-              'screen',
-              'variants',
-              'responsive',
-              'plugin',
-            ],
-          },
-        ],
-        'scss/at-rule-no-unknown': null,
-      },
+      rules: { 'scss/at-rule-no-unknown': null },
     },
   ],
   plugins: [
