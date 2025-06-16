@@ -5,15 +5,7 @@ import stylelint from 'stylelint';
 
 import config from '.';
 
-interface TestConfig {
-  code: string;
-  messages?: string[];
-  output?: string;
-  codeFilename?: string;
-  result?: string;
-}
-
-const tests: Record<string, TestConfig> = {
+const tests = {
   'empty file': { code: '' },
   global: {
     code: endent`
@@ -242,7 +234,7 @@ const tests: Record<string, TestConfig> = {
       }
       </style>\n
     `,
-    codeFilename: 'index.vue',
+    filename: 'index.vue',
   },
   'wrong property order': {
     code: endent`
@@ -271,7 +263,7 @@ for (const [name, _testConfig] of Object.entries(tests)) {
       results: [firstResult],
     } = await stylelint.lint({
       code: testConfig.code,
-      codeFilename: testConfig.codeFilename,
+      codeFilename: testConfig.filename,
       config,
     });
 
@@ -284,20 +276,20 @@ for (const [name, _testConfig] of Object.entries(tests)) {
       ]),
     )
       .flat()
-      .map((warning: { text: string }) => warning.text);
+      .map(_ => _.text);
 
     expect(messages).toEqual(testConfig.messages);
 
     const { code: firstOutput } = await stylelint.lint({
       code: testConfig.code,
-      codeFilename: testConfig.codeFilename,
+      codeFilename: testConfig.filename,
       config,
       fix: true,
     });
 
     const { code: output } = await stylelint.lint({
       code: firstOutput,
-      codeFilename: testConfig.codeFilename,
+      codeFilename: testConfig.filename,
       config,
       fix: true,
     });

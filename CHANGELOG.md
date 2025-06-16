@@ -1,3 +1,10 @@
+## [4.0.3](https://github.com/dword-design/stylelint-config/compare/v4.0.2...v4.0.3) (2025-06-16)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#169](https://github.com/dword-design/stylelint-config/issues/169)) ([f35e46e](https://github.com/dword-design/stylelint-config/commit/f35e46e07fa66e08ad2ab7f57c1c6395150f543f))
+
 ## [4.0.2](https://github.com/dword-design/stylelint-config/compare/v4.0.1...v4.0.2) (2025-04-13)
 
 
