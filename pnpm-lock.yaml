@@ -15,8 +15,8 @@ importers:
         specifier: ^1.8.0
         version: 1.8.0
       stylelint-config-hudochenkov:
-        specifier: ^11.0.0
-        version: 11.0.0(stylelint-order@6.0.4(stylelint@16.20.0(typescript@5.8.3)))(stylelint@16.20.0(typescript@5.8.3))
+        specifier: ^12.0.0
+        version: 12.0.0(stylelint-order@6.0.4(stylelint@16.20.0(typescript@5.8.3)))(stylelint@16.20.0(typescript@5.8.3))
       stylelint-config-recommended-vue:
         specifier: ^1.6.0
         version: 1.6.0(postcss-html@1.8.0)(stylelint@16.20.0(typescript@5.8.3))
@@ -3891,11 +3891,11 @@ packages:
       postcss-html: ^1.0.0
       stylelint: '>=14.0.0'
 
-  stylelint-config-hudochenkov@11.0.0:
-    resolution: {integrity: sha512-Pub4qG22m09I4P4rvZ007XzXhNsM9HzPqB0cZ6xTid1fcZtddjJ91YqZZMPJDjZ3NtjQc5csNikHJ9sOxJXBMw==}
+  stylelint-config-hudochenkov@12.0.0:
+    resolution: {integrity: sha512-q2h/RrdtaUDAULx1JN8qv5P5Qk5kDrlh1pvLZjEW6lvRZFmeZfPFwdw480449sYPUxvEBEXP8lF46wq28c/Y8A==}
     peerDependencies:
-      stylelint: ^16.0.2
-      stylelint-order: ^6.0.4
+      stylelint: ^16.19.0
+      stylelint-order: ^7.0.0
 
   stylelint-config-recommended-scss@14.1.0:
     resolution: {integrity: sha512-bhaMhh1u5dQqSsf6ri2GVWWQW5iUjBYgcHkh7SgDDn92ijoItC/cfO/W+fpXshgTQWhwFkP1rVcewcv4jaftRg==}
@@ -8337,7 +8337,7 @@ snapshots:
       postcss-html: 1.8.0
       stylelint: 16.20.0(typescript@5.8.3)
 
-  stylelint-config-hudochenkov@11.0.0(stylelint-order@6.0.4(stylelint@16.20.0(typescript@5.8.3)))(stylelint@16.20.0(typescript@5.8.3)):
+  stylelint-config-hudochenkov@12.0.0(stylelint-order@6.0.4(stylelint@16.20.0(typescript@5.8.3)))(stylelint@16.20.0(typescript@5.8.3)):
     dependencies:
       stylelint: 16.20.0(typescript@5.8.3)
       stylelint-order: 6.0.4(stylelint@16.20.0(typescript@5.8.3))
