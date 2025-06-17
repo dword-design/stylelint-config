@@ -1,3 +1,10 @@
+# [4.1.0](https://github.com/dword-design/stylelint-config/compare/v4.0.3...v4.1.0) (2025-06-17)
+
+
+### Features
+
+* tailwind ([#171](https://github.com/dword-design/stylelint-config/issues/171)) ([c43afb8](https://github.com/dword-design/stylelint-config/commit/c43afb8a811ea3bc3cde177711a9f21394e094d0))
+
 ## [4.0.3](https://github.com/dword-design/stylelint-config/compare/v4.0.2...v4.0.3) (2025-06-16)
 
 
