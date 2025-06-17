@@ -201,6 +201,20 @@ const tests = {
       }\n
     `,
   },
+  'tailwind css': {
+    code: endent`
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      @layer components {
+        .btn-primary {
+          @apply py-2 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-700;
+        }
+      }\n
+    `,
+    filename: 'tailwind.css',
+  },
   valid: {
     code: endent`
       body {
