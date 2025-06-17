@@ -11,7 +11,7 @@ export default {
   overrides: [
     {
       extends: [packageName`stylelint-config-tailwindcss`],
-      files: ['**/tailwind.css'],
+      files: ['**/*.css'],
       rules: { 'scss/at-rule-no-unknown': null },
     },
   ],

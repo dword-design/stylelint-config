@@ -213,7 +213,7 @@ const tests = {
         }
       }\n
     `,
-    codeFilename: 'tailwind.css',
+    filename: 'tailwind.css',
   },
   valid: {
     code: endent`
