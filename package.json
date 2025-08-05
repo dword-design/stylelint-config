@@ -29,7 +29,7 @@
     "test": "base test"
   },
   "dependencies": {
-    "depcheck-package-name": "^3.0.1",
+    "depcheck-package-name": "^4.0.0",
     "postcss-html": "^1.8.0",
     "stylelint-config-hudochenkov": "^11.0.0",
     "stylelint-config-recommended-vue": "^1.6.0",
