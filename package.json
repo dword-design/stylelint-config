@@ -41,7 +41,7 @@
     "stylelint-use-nesting": "^6.0.0"
   },
   "devDependencies": {
-    "@dword-design/base": "^13.0.7",
+    "@dword-design/base": "^15.0.0",
     "@playwright/test": "^1.53.0",
     "endent": "npm:@dword-design/endent@^1.4.1",
     "execa": "^9.5.2",
