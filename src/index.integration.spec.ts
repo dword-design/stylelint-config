@@ -14,6 +14,6 @@ test('works', async ({}, testInfo) => {
     JSON.stringify({ extends: '../../dist/index.js' }),
   );
 
-  await fs.outputFile('index.scss', '');
-  await execaCommand('stylelint index.scss');
+  await fs.outputFile(pathLib.join(cwd, 'index.scss'), '');
+  await execaCommand('stylelint index.scss', { cwd });
 });

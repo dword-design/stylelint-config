@@ -1,5 +1,4 @@
 import packageName from 'depcheck-package-name';
-import stylelintUseNesting from 'stylelint-use-nesting';
 
 export default {
   extends: [
@@ -16,7 +15,7 @@ export default {
     },
   ],
   plugins: [
-    stylelintUseNesting, // "CommonJS plugins are deprecated" error when listing it as a string
+    packageName`stylelint-use-nesting`,
     packageName`stylelint-declaration-block-no-ignored-properties`,
   ],
   rules: {
