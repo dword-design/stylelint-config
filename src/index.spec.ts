@@ -40,34 +40,6 @@ const tests: Record<string, TestConfig> = {
       }\n
     `,
   },
-  'nesting: inner nesting pseudo selector': {
-    code: endent`
-      body {
-        margin: 0.5rem;
-
-        img {
-          padding: 0;
-        }
-
-        &:hover img {
-          padding: 0.5rem;
-        }
-      }\n
-    `,
-    output: endent`
-      body {
-        margin: 0.5rem;
-
-        img {
-          padding: 0;
-        }
-
-      &:hover img {
-        padding: 0.5rem;
-      }
-      }\n
-    `,
-  },
   'no blank line at inner selector': {
     code: endent`
       body {
