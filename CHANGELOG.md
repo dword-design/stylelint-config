@@ -1,3 +1,10 @@
+## [5.0.1](https://github.com/dword-design/stylelint-config/compare/v5.0.0...v5.0.1) (2025-12-06)
+
+
+### Bug Fixes
+
+* disable no-descending-specificity rule ([d233aec](https://github.com/dword-design/stylelint-config/commit/d233aeceafca858a19df5762adc152474f11a5b8))
+
 # [5.0.0](https://github.com/dword-design/stylelint-config/compare/v4.1.0...v5.0.0) (2025-12-06)
 
 
