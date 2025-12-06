@@ -1,17 +1,19 @@
+import pathLib from 'node:path';
+
+import { test } from '@playwright/test';
 import { execaCommand } from 'execa';
 import fs from 'fs-extra';
-import withLocalTmpDir from 'with-local-tmp-dir';
 
-export default {
-  before: () => execaCommand('base prepublishOnly'),
-  works: () =>
-    withLocalTmpDir(async () => {
-      await fs.outputFile(
-        '.stylelintrc.json',
-        JSON.stringify({ extends: '../dist/index.js' }),
-      );
+test.beforeAll(() => execaCommand('base prepublishOnly'));
 
-      await fs.outputFile('index.scss', '');
-      await execaCommand('stylelint index.scss');
-    }),
-};
+test('works', async ({}, testInfo) => {
+  const cwd = testInfo.outputPath();
+
+  await fs.outputFile(
+    pathLib.join(cwd, '.stylelintrc.json'),
+    JSON.stringify({ extends: '../../dist/index.js' }),
+  );
+
+  await fs.outputFile('index.scss', '');
+  await execaCommand('stylelint index.scss');
+});
