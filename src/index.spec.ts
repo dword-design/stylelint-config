@@ -179,6 +179,30 @@ const tests: Record<string, TestConfig> = {
       }\n
     `,
   },
+  'specificity no endless loop': {
+    // TODO: no-descending-specificity leads to an endless loop here. Swapping the order of the parent selectors will always lead to errors. See also https://github.com/stylelint/stylelint/issues?q=is%3Aissue%20state%3Aopen%20no-descending-specificity.
+    code: endent`
+      .a1 .a2 {
+        .child1 {
+          color: red;
+        }
+
+        .child2 {
+          color: red;
+        }
+      }
+
+      .b1 {
+        .child1 {
+          color: red;
+        }
+
+        .c1 .c2 .child2 {
+          color: red;
+        }
+      }\n
+    `,
+  },
   'tailwind css': {
     code: endent`
       @tailwind base;

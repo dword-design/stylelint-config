@@ -20,6 +20,7 @@ export default {
   ],
   rules: {
     'csstools/use-nesting': ['always', { except: /&:(hover|focus)/ }],
+    'no-descending-specificity': null, // TODO: See specificity test and https://github.com/stylelint/stylelint/issues?q=is%3Aissue%20state%3Aopen%20no-descending-specificity
     'no-empty-source': null,
     'plugin/declaration-block-no-ignored-properties': true,
     'scss/no-global-function-names': null,
