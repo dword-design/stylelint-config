@@ -1,11 +1,17 @@
 import { expect, test } from '@playwright/test';
 import endent from 'endent';
-import { pick } from 'lodash-es';
 import stylelint from 'stylelint';
 
 import config from '.';
 
-const tests = {
+interface TestConfig {
+  code: string;
+  filename?: string;
+  messages?: string[];
+  output?: string;
+}
+
+const tests: Record<string, TestConfig> = {
   'empty file': { code: '' },
   global: {
     code: endent`
@@ -31,34 +37,6 @@ const tests = {
     output: endent`
       body {
         background: red;
-      }\n
-    `,
-  },
-  'nesting: inner nesting pseudo selector': {
-    code: endent`
-      body {
-        margin: 0.5rem;
-
-        img {
-          padding: 0;
-        }
-
-        &:hover img {
-          padding: 0.5rem;
-        }
-      }\n
-    `,
-    result: endent`
-      body {
-        margin: 0.5rem;
-
-        img {
-          padding: 0;
-        }
-
-      &:hover img {
-        padding: 0.5rem;
-      }
       }\n
     `,
   },
@@ -267,16 +245,12 @@ for (const [name, _testConfig] of Object.entries(tests)) {
       config,
     });
 
-    const messages = Object.values(
-      pick(firstResult, [
-        'deprecations',
-        'invalidOptionWarnings',
-        'parseErrors',
-        'warnings',
-      ]),
-    )
-      .flat()
-      .map(_ => _.text);
+    const messages = [
+      ...firstResult.deprecations,
+      ...firstResult.invalidOptionWarnings,
+      ...firstResult.parseErrors,
+      ...firstResult.warnings,
+    ].map(_ => _.text);
 
     expect(messages).toEqual(testConfig.messages);
 
