@@ -24,9 +24,10 @@ export default {
     'no-empty-source': null,
     'plugin/declaration-block-no-ignored-properties': true,
     'scss/no-global-function-names': null,
+    'scss/operator-no-newline-after': null,
     'selector-pseudo-class-no-unknown': [
       true,
       { ignorePseudoClasses: ['global'] },
-    ],
+    ], // TODO: Prettier breaks this but I think the rule makes sense
   },
 };

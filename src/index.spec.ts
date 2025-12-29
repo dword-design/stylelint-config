@@ -40,6 +40,17 @@ const tests: Record<string, TestConfig> = {
       }\n
     `,
   },
+  "line break after operator (but should't be there, see that scss/operator-no-newline-after is disabled to avoid Prettier conflict)":
+    {
+      code: endent`
+        .is-dark-transparent-bg {
+          background-color: hsl(
+            var(--bulma-scheme-h) var(--bulma-scheme-s) var(--bulma-scheme-invert-l) /
+              20%
+          );
+        }\n
+      `,
+    },
   'no blank line at inner selector': {
     code: endent`
       body {
