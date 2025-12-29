@@ -82,6 +82,16 @@ const tests: Record<string, TestConfig> = {
       }\n
     `,
   },
+  'no line break after operator': {
+    code: endent`
+      .is-dark-transparent-bg {
+        background-color: hsl(
+          var(--bulma-scheme-h) var(--bulma-scheme-s) var(--bulma-scheme-invert-l) /
+            20%
+        );
+      }\n
+    `,
+  },
   'no nesting: attribute': {
     code: endent`
       body {
