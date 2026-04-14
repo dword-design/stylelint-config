@@ -12,6 +12,15 @@ interface TestConfig {
 }
 
 const tests: Record<string, TestConfig> = {
+  'comment in same line in map': {
+    code: endent`
+      @use "bulma/sass" with (
+        $size-2: 2.25rem, // big heading
+        $size-3: 1.75rem,
+      );\n
+    `,
+    filename: 'index.scss',
+  },
   'empty file': { code: '' },
   global: {
     code: endent`
