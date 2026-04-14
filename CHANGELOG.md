@@ -1,3 +1,10 @@
+## [5.0.4](https://github.com/dword-design/stylelint-config/compare/v5.0.3...v5.0.4) (2026-04-14)
+
+
+### Bug Fixes
+
+* doc issue ([68479c0](https://github.com/dword-design/stylelint-config/commit/68479c08cce339fbe8e17d8483cbc07ca361da0a))
+
 ## [5.0.3](https://github.com/dword-design/stylelint-config/compare/v5.0.2...v5.0.3) (2026-04-14)
 
 
