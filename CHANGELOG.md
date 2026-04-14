@@ -1,3 +1,10 @@
+## [5.0.3](https://github.com/dword-design/stylelint-config/compare/v5.0.2...v5.0.3) (2026-04-14)
+
+
+### Bug Fixes
+
+* disable prettier for scss so that single-line comments in maps aren't moved onto the next line ([bc8db34](https://github.com/dword-design/stylelint-config/commit/bc8db3408548a6cc27f41e5e19a72a1d5e21800d))
+
 ## [5.0.2](https://github.com/dword-design/stylelint-config/compare/v5.0.1...v5.0.2) (2025-12-29)
 
 
