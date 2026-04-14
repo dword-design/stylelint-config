@@ -8,7 +8,7 @@ export default {
     `${packageName`stylelint-config-recommended-vue`}/scss`,
   ],
   overrides: [
-    { files: ['**/*.scss'], rules: { 'prettier/prettier': null } }, // TODO: Prettier moves single-line comments in maps into the next line
+    { files: ['**/*.scss'], rules: { 'prettier/prettier': null } }, // TODO: https://github.com/prettier/prettier/issues/19047
     {
       extends: [packageName`stylelint-config-tailwindcss`],
       files: ['**/*.css'],
